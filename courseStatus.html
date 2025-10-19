@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - My Progress</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>EduLearn</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courseStatus.html" class="nav-link active">My Progress</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-primary" id="loginBtn">Login</button>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>My Learning Progress</h1>
+            <p>Track your course completions and achievements</p>
+        </div>
+    </header>
+
+    <!-- Progress Overview -->
+    <section class="progress-overview">
+        <div class="container">
+            <div class="progress-stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalEnrolled">0</div>
+                    <div class="stat-label">Courses Enrolled</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalCompleted">0</div>
+                    <div class="stat-label">Courses Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="completionRate">0%</div>
+                    <div class="stat-label">Completion Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalHours">0</div>
+                    <div class="stat-label">Hours Learned</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Progress Section -->
+    <main class="progress-section">
+        <div class="container">
+            <!-- Not Logged In Message -->
+            <div class="not-logged-in" id="notLoggedIn">
+                <div class="empty-state">
+                    <h3>Please Log In</h3>
+                    <p>You need to be logged in to view your course progress.</p>
+                    <button class="btn btn-primary" id="loginPrompt">Login Now</button>
+                </div>
+            </div>
+
+            <!-- Progress Content -->
+            <div class="progress-content" id="progressContent" style="display: none;">
+                <!-- Completed Courses -->
+                <div class="progress-section-header">
+                    <h2>Completed Courses</h2>
+                    <span class="section-count" id="completedCount">0</span>
+                </div>
+                <div class="progress-grid" id="completedCourses">
+                    <!-- Completed courses will be populated by JavaScript -->
+                </div>
+
+                <!-- In Progress Courses -->
+                <div class="progress-section-header">
+                    <h2>Currently Enrolled</h2>
+                    <span class="section-count" id="enrolledCount">0</span>
+                </div>
+                <div class="progress-grid" id="enrolledCourses">
+                    <!-- Enrolled courses will be populated by JavaScript -->
+                </div>
+
+                <!-- Available Courses -->
+                <div class="progress-section-header">
+                    <h2>Available Courses</h2>
+                    <span class="section-count" id="availableCount">0</span>
+                </div>
+                <div class="progress-grid" id="availableCourses">
+                    <!-- Available courses will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Achievement Modal -->
+    <div class="modal achievement-modal" id="achievementModal">
+        <div class="modal-content">
+            <div class="achievement-content">
+                <div class="achievement-icon">🎉</div>
+                <h3>Congratulations!</h3>
+                <p id="achievementText">You've completed a course!</p>
+                <button class="btn btn-primary" id="closeAchievement">Continue Learning</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login</h3>
+                <span class="close" id="closeLogin">&times;</span>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Login</button>
+            </form>
+            <p class="modal-footer">
+                Don't have an account? <a href="#" id="switchToSignup">Sign up</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Sign Up</h3>
+                <span class="close" id="closeSignup">&times;</span>
+            </div>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name:</label>
+                    <input type="text" id="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Sign Up</button>
+            </form>
+            <p class="modal-footer">
+                Already have an account? <a href="#" id="switchToLogin">Login</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

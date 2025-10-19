@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - Courses</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>EduLearn</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link active">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courseStatus.html" class="nav-link">My Progress</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-primary" id="loginBtn">Login</button>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Available Courses</h1>
+            <p>Choose from our comprehensive collection of courses</p>
+        </div>
+    </header>
+
+    <!-- Courses Section -->
+    <main class="courses-section">
+        <div class="container">
+            <div class="courses-grid">
+                <!-- Course 1: JavaScript Fundamentals -->
+                <div class="course-card detailed" data-course-id="1">
+                    <div class="course-image">
+                        <div class="course-placeholder">JS</div>
+                    </div>
+                    <div class="course-info">
+                        <h3>JavaScript Fundamentals</h3>
+                        <p class="course-description">
+                            Master the fundamentals of JavaScript programming. Learn variables, functions, 
+                            objects, arrays, and DOM manipulation. Perfect for beginners starting their 
+                            web development journey.
+                        </p>
+                        <div class="course-details">
+                            <div class="course-meta">
+                                <span class="duration">📚 8 hours</span>
+                                <span class="level">🎯 Beginner</span>
+                                <span class="students">👥 1,234 students</span>
+                            </div>
+                            <div class="course-topics">
+                                <h4>What you'll learn:</h4>
+                                <ul>
+                                    <li>Variables and Data Types</li>
+                                    <li>Functions and Scope</li>
+                                    <li>DOM Manipulation</li>
+                                    <li>Event Handling</li>
+                                    <li>Asynchronous Programming</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-primary enroll-btn" data-course-id="1">
+                                Start Learning
+                            </button>
+                            <button class="btn btn-success complete-btn" data-course-id="1" style="display: none;">
+                                Mark as Complete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2: Advanced CSS Techniques -->
+                <div class="course-card detailed" data-course-id="2">
+                    <div class="course-image">
+                        <div class="course-placeholder">CSS</div>
+                    </div>
+                    <div class="course-info">
+                        <h3>Advanced CSS Techniques</h3>
+                        <p class="course-description">
+                            Take your CSS skills to the next level with advanced techniques. Learn Flexbox, 
+                            Grid, animations, and modern layout methods. Create stunning, responsive designs.
+                        </p>
+                        <div class="course-details">
+                            <div class="course-meta">
+                                <span class="duration">📚 6 hours</span>
+                                <span class="level">🎯 Intermediate</span>
+                                <span class="students">👥 987 students</span>
+                            </div>
+                            <div class="course-topics">
+                                <h4>What you'll learn:</h4>
+                                <ul>
+                                    <li>CSS Grid and Flexbox</li>
+                                    <li>CSS Animations</li>
+                                    <li>Responsive Design</li>
+                                    <li>CSS Variables</li>
+                                    <li>Modern Layout Techniques</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-primary enroll-btn" data-course-id="2">
+                                Start Learning
+                            </button>
+                            <button class="btn btn-success complete-btn" data-course-id="2" style="display: none;">
+                                Mark as Complete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3: HTML5 & Web Structure -->
+                <div class="course-card detailed" data-course-id="3">
+                    <div class="course-image">
+                        <div class="course-placeholder">HTML</div>
+                    </div>
+                    <div class="course-info">
+                        <h3>HTML5 & Web Structure</h3>
+                        <p class="course-description">
+                            Build solid foundations with semantic HTML5. Learn modern HTML elements, 
+                            accessibility best practices, and how to create well-structured web pages.
+                        </p>
+                        <div class="course-details">
+                            <div class="course-meta">
+                                <span class="duration">📚 4 hours</span>
+                                <span class="level">🎯 Beginner</span>
+                                <span class="students">👥 1,567 students</span>
+                            </div>
+                            <div class="course-topics">
+                                <h4>What you'll learn:</h4>
+                                <ul>
+                                    <li>Semantic HTML Elements</li>
+                                    <li>Forms and Input Types</li>
+                                    <li>Accessibility Guidelines</li>
+                                    <li>Meta Tags and SEO</li>
+                                    <li>HTML5 APIs</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-primary enroll-btn" data-course-id="3">
+                                Start Learning
+                            </button>
+                            <button class="btn btn-success complete-btn" data-course-id="3" style="display: none;">
+                                Mark as Complete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 4: React Fundamentals -->
+                <div class="course-card detailed" data-course-id="4">
+                    <div class="course-image">
+                        <div class="course-placeholder">REACT</div>
+                    </div>
+                    <div class="course-info">
+                        <h3>React Fundamentals</h3>
+                        <p class="course-description">
+                            Learn React.js from scratch. Build dynamic user interfaces with components, 
+                            state management, and hooks. Perfect for modern web development.
+                        </p>
+                        <div class="course-details">
+                            <div class="course-meta">
+                                <span class="duration">📚 10 hours</span>
+                                <span class="level">🎯 Intermediate</span>
+                                <span class="students">👥 2,456 students</span>
+                            </div>
+                            <div class="course-topics">
+                                <h4>What you'll learn:</h4>
+                                <ul>
+                                    <li>React Components</li>
+                                    <li>State and Props</li>
+                                    <li>React Hooks</li>
+                                    <li>Event Handling</li>
+                                    <li>Component Lifecycle</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-primary enroll-btn" data-course-id="4">
+                                Start Learning
+                            </button>
+                            <button class="btn btn-success complete-btn" data-course-id="4" style="display: none;">
+                                Mark as Complete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 5: Node.js Backend Development -->
+                <div class="course-card detailed" data-course-id="5">
+                    <div class="course-image">
+                        <div class="course-placeholder">NODE</div>
+                    </div>
+                    <div class="course-info">
+                        <h3>Node.js Backend Development</h3>
+                        <p class="course-description">
+                            Build powerful backend applications with Node.js. Learn server-side JavaScript, 
+                            APIs, databases, and deployment strategies.
+                        </p>
+                        <div class="course-details">
+                            <div class="course-meta">
+                                <span class="duration">📚 12 hours</span>
+                                <span class="level">🎯 Advanced</span>
+                                <span class="students">👥 1,789 students</span>
+                            </div>
+                            <div class="course-topics">
+                                <h4>What you'll learn:</h4>
+                                <ul>
+                                    <li>Express.js Framework</li>
+                                    <li>REST API Development</li>
+                                    <li>Database Integration</li>
+                                    <li>Authentication & Security</li>
+                                    <li>Deployment Strategies</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-primary enroll-btn" data-course-id="5">
+                                Start Learning
+                            </button>
+                            <button class="btn btn-success complete-btn" data-course-id="5" style="display: none;">
+                                Mark as Complete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login</h3>
+                <span class="close" id="closeLogin">&times;</span>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Login</button>
+            </form>
+            <p class="modal-footer">
+                Don't have an account? <a href="#" id="switchToSignup">Sign up</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Sign Up</h3>
+                <span class="close" id="closeSignup">&times;</span>
+            </div>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name:</label>
+                    <input type="text" id="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Sign Up</button>
+            </form>
+            <p class="modal-footer">
+                Already have an account? <a href="#" id="switchToLogin">Login</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

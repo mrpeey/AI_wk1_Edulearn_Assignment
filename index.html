@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>EduLearn</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courseStatus.html" class="nav-link">My Progress</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-primary" id="loginBtn">Login</button>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to EduLearn</h1>
+                <p>Expand your knowledge with our comprehensive online courses</p>
+                <div class="hero-buttons">
+                    <a href="courses.html" class="btn btn-primary">Browse Courses</a>
+                    <button class="btn btn-secondary" id="signupBtn">Sign Up</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Courses Section -->
+        <section class="featured-courses">
+            <div class="container">
+                <h2>Featured Courses</h2>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <div class="course-placeholder">JS</div>
+                        </div>
+                        <div class="course-info">
+                            <h3>JavaScript Fundamentals</h3>
+                            <p>Learn the basics of JavaScript programming language</p>
+                            <div class="course-meta">
+                                <span class="duration">8 hours</span>
+                                <span class="level">Beginner</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-image">
+                            <div class="course-placeholder">CSS</div>
+                        </div>
+                        <div class="course-info">
+                            <h3>Advanced CSS Techniques</h3>
+                            <p>Master modern CSS features and responsive design</p>
+                            <div class="course-meta">
+                                <span class="duration">6 hours</span>
+                                <span class="level">Intermediate</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-image">
+                            <div class="course-placeholder">HTML</div>
+                        </div>
+                        <div class="course-info">
+                            <h3>HTML5 & Web Structure</h3>
+                            <p>Build semantic and accessible web pages</p>
+                            <div class="course-meta">
+                                <span class="duration">4 hours</span>
+                                <span class="level">Beginner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login</h3>
+                <span class="close" id="closeLogin">&times;</span>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Login</button>
+            </form>
+            <p class="modal-footer">
+                Don't have an account? <a href="#" id="switchToSignup">Sign up</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Sign Up</h3>
+                <span class="close" id="closeSignup">&times;</span>
+            </div>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name:</label>
+                    <input type="text" id="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Sign Up</button>
+            </form>
+            <p class="modal-footer">
+                Already have an account? <a href="#" id="switchToLogin">Login</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- User Profile Section (Hidden by default) -->
+    <div class="user-profile" id="userProfile" style="display: none;">
+        <div class="profile-info">
+            <span>Welcome, <span id="userName"></span>!</span>
+            <button class="btn btn-secondary" id="logoutBtn">Logout</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
