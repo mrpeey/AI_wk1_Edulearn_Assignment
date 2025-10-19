@@ -9,6 +9,7 @@ A modern, responsive e-learning platform built with HTML, CSS, and JavaScript th
 - **User Authentication**: Sign up and login system with local storage
 - **Progress Tracking**: Mark courses as completed and track learning progress
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
+- **🇱🇸 Lesotho Flag Theme**: Beautiful color scheme using the blue, white, and green colors of Lesotho's flag
 
 ### Pages
 1. **Home Page (index.html)**: Landing page with featured courses and authentication
@@ -83,11 +84,12 @@ e-learning-platform/
 
 ## 🎨 Design Features
 
-### Modern UI/UX
-- Clean, professional design with gradient accents
-- Smooth animations and hover effects
+### Modern UI/UX with Lesotho Flag Colors
+- Clean, professional design with patriotic blue-to-green gradient accents
+- Smooth animations and hover effects using Lesotho's national colors
 - Intuitive navigation with active page indicators
 - Mobile-first responsive layout
+- **Color Palette**: Deep blue (#0054A6), vibrant green (#00A651), and clean white (#FFFFFF)
 
 ### Interactive Elements
 - Modal dialogs for authentication
